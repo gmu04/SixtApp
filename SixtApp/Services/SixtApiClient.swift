@@ -18,7 +18,7 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
     
     
     /*  Comment for reviewer:
-        I did not prefer to use singleton pattern because I am injecting api client when the app stats, and no need to create it again.
+        I did not prefer to use singleton pattern because I am injecting api client when the app starts, and wont be necessary to create it later.
         Besides SixtApi is just used to fetch data - Any threading issues expected for current scenario(s)
      */
     init?(baseUrl:String) {

@@ -16,7 +16,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.window = UIWindow(windowScene: windowScene)
+
+        /*  Comment for reviewer:
+                I'd like to use storyboard because it seems easier to use for this demo.
+                Besides, I'd like to inject service via constractor instead of setting property.
+                    So, I need to uncheck "Is Initial View Controller" checkbox to prevent it lauching
+         */
+        
+        /*
+         //if statement is obsolete
+         if let _ = window?.rootViewController as? ViewController{
+            
+         }else{*/
+            
+            //instantiate api services here
+            let api = ApiFactory.service(.sixt)!
+            
+            //Storyboard exist but not used to launch the app
+            let vc = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(identifier: "ViewController") { coder in
+                    ViewController(coder: coder, api: api)
+                }
+                
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            
+        //}
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

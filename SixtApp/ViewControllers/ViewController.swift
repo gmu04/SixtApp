@@ -9,7 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let api:SixtApiClient! = nil
+    private(set) var api:ApiClient!
+    
+   
+    convenience init?(coder: NSCoder, api:ApiClient) {
+        self.init(coder:coder)
+        self.api = api
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     
     
     override func viewDidLoad() {
@@ -18,7 +29,7 @@ class ViewController: UIViewController {
         
         
         //TODO: Inject this code
-        let api = ApiFactory.service(.sixt)!
+        //let api = ApiFactory.service(.sixt)!
         
         //TODO: dont forget to run it in main queue
         api.fetch(path: "/codingtask/cars", completion: { result in
