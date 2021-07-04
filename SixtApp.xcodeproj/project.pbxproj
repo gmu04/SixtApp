@@ -23,6 +23,7 @@
 		F7658C532691DA2E00B7BD5D /* Transmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C522691DA2E00B7BD5D /* Transmission.swift */; };
 		F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */; };
 		F7658C572691DC9100B7BD5D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C562691DC9100B7BD5D /* Car.swift */; };
+		F7658C5B2692229500B7BD5D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C5A2692229500B7BD5D /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F7658C522691DA2E00B7BD5D /* Transmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmission.swift; sourceTree = "<group>"; };
 		F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCleanliness.swift; sourceTree = "<group>"; };
 		F7658C562691DC9100B7BD5D /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		F7658C5A2692229500B7BD5D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				F7658C172691859C00B7BD5D /* ViewController.swift */,
+				F7658C5A2692229500B7BD5D /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				F7658C162691859C00B7BD5D /* SceneDelegate.swift in Sources */,
 				F7658C4926918C0B00B7BD5D /* SixtApiClient.swift in Sources */,
 				F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */,
+				F7658C5B2692229500B7BD5D /* MapViewController.swift in Sources */,
 				F7658C572691DC9100B7BD5D /* Car.swift in Sources */,
 				F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */,
 				F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */,

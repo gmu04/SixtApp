@@ -19,29 +19,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
 
+ 
         /*  Comment for reviewer:
-                I'd like to use storyboard because it seems easier to use for this demo.
-                Besides, I'd like to inject service via constractor instead of setting property.
-                    So, I need to uncheck "Is Initial View Controller" checkbox to prevent it lauching
+                I'd like to use storyboard because it seems easier to implement this demo.
+                However I am able to create all UI by code.
+                
+                I need to uncheck "Is Initial View Controller" checkbox to prevent it lauching by itself
          */
         
-        /*
-         //if statement is obsolete
-         if let _ = window?.rootViewController as? ViewController{
+
+        //instantiate api services here
+        let api = ApiFactory.service(.sixt)!
+        
+        //get tabbar
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(identifier: "TabBarControllerID") as! UITabBarController
+        
+        //inject api service to the first tab - cars table view screen
+        if let nvc = tabBarController.viewControllers?.first as? UINavigationController,
+           let vc1 = nvc.viewControllers.first as? ViewController{
+            vc1.api = api
+        }
+        //inject api service to the second tab - map view screen
+        if let mapvc = tabBarController.viewControllers?[1] as? MapViewController{
+            mapvc.api = api
+        }
+
             
-         }else{*/
-            
-            //instantiate api services here
-            let api = ApiFactory.service(.sixt)!
-            
-            //Storyboard exist but not used to launch the app
-            let vc = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(identifier: "ViewController") { coder in
-                    ViewController(coder: coder, api: api)
-                }
-                
-            self.window?.rootViewController = vc
-            self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
             
         //}
         

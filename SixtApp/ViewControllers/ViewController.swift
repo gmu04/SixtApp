@@ -9,28 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private(set) var api:ApiClient!
+    var api:ApiClient!
     
-   
-    convenience init?(coder: NSCoder, api:ApiClient) {
-        self.init(coder:coder)
-        self.api = api
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         
+            
+            
         //TODO: Inject this code
         //let api = ApiFactory.service(.sixt)!
-        
+
         //TODO: dont forget to run it in main queue
         api.fetch(path: "/codingtask/cars", completion: { result in
             
@@ -62,9 +53,7 @@ class ViewController: UIViewController {
 
             }
         })
-        
-        
-        
+      
         
     }
 
