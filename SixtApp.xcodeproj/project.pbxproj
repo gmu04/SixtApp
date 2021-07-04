@@ -101,11 +101,11 @@
 			children = (
 				F7658C132691859C00B7BD5D /* AppDelegate.swift */,
 				F7658C152691859C00B7BD5D /* SceneDelegate.swift */,
-				F7658C172691859C00B7BD5D /* ViewController.swift */,
-				F7658C192691859C00B7BD5D /* Main.storyboard */,
-				F7658C1C2691859E00B7BD5D /* Assets.xcassets */,
-				F7658C1E2691859E00B7BD5D /* LaunchScreen.storyboard */,
-				F7658C212691859E00B7BD5D /* Info.plist */,
+				F7658C462691865200B7BD5D /* Managers */,
+				F7658C472691866700B7BD5D /* Models */,
+				F7658C43269185D100B7BD5D /* ViewControllers */,
+				F7658C45269185FF00B7BD5D /* Storyboards */,
+				F7658C44269185E600B7BD5D /* Artifacts */,
 			);
 			path = SixtApp;
 			sourceTree = "<group>";
@@ -126,6 +126,46 @@
 				F7658C372691859E00B7BD5D /* Info.plist */,
 			);
 			path = SixtAppUITests;
+			sourceTree = "<group>";
+		};
+		F7658C43269185D100B7BD5D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7658C172691859C00B7BD5D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7658C44269185E600B7BD5D /* Artifacts */ = {
+			isa = PBXGroup;
+			children = (
+				F7658C1C2691859E00B7BD5D /* Assets.xcassets */,
+				F7658C1E2691859E00B7BD5D /* LaunchScreen.storyboard */,
+				F7658C212691859E00B7BD5D /* Info.plist */,
+			);
+			name = Artifacts;
+			sourceTree = "<group>";
+		};
+		F7658C45269185FF00B7BD5D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F7658C192691859C00B7BD5D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F7658C462691865200B7BD5D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F7658C472691866700B7BD5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
