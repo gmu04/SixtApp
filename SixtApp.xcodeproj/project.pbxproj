@@ -15,6 +15,10 @@
 		F7658C202691859E00B7BD5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7658C1E2691859E00B7BD5D /* LaunchScreen.storyboard */; };
 		F7658C2B2691859E00B7BD5D /* SixtAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C2A2691859E00B7BD5D /* SixtAppTests.swift */; };
 		F7658C362691859E00B7BD5D /* SixtAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C352691859E00B7BD5D /* SixtAppUITests.swift */; };
+		F7658C4926918C0B00B7BD5D /* SixtApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4826918C0B00B7BD5D /* SixtApiClient.swift */; };
+		F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4A26918D2F00B7BD5D /* ApiFactory.swift */; };
+		F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4C2691AD7B00B7BD5D /* ApiError.swift */; };
+		F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4E2691B13500B7BD5D /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		F7658C312691859E00B7BD5D /* SixtAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SixtAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7658C352691859E00B7BD5D /* SixtAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtAppUITests.swift; sourceTree = "<group>"; };
 		F7658C372691859E00B7BD5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7658C4826918C0B00B7BD5D /* SixtApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtApiClient.swift; sourceTree = "<group>"; };
+		F7658C4A26918D2F00B7BD5D /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
+		F7658C4C2691AD7B00B7BD5D /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F7658C4E2691B13500B7BD5D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,7 @@
 			children = (
 				F7658C132691859C00B7BD5D /* AppDelegate.swift */,
 				F7658C152691859C00B7BD5D /* SceneDelegate.swift */,
-				F7658C462691865200B7BD5D /* Managers */,
+				F7658C462691865200B7BD5D /* Services */,
 				F7658C472691866700B7BD5D /* Models */,
 				F7658C43269185D100B7BD5D /* ViewControllers */,
 				F7658C45269185FF00B7BD5D /* Storyboards */,
@@ -154,11 +162,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		F7658C462691865200B7BD5D /* Managers */ = {
+		F7658C462691865200B7BD5D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F7658C4A26918D2F00B7BD5D /* ApiFactory.swift */,
+				F7658C4E2691B13500B7BD5D /* ApiClient.swift */,
+				F7658C4C2691AD7B00B7BD5D /* ApiError.swift */,
+				F7658C4826918C0B00B7BD5D /* SixtApiClient.swift */,
 			);
-			path = Managers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F7658C472691866700B7BD5D /* Models */ = {
@@ -298,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */,
 				F7658C182691859C00B7BD5D /* ViewController.swift in Sources */,
 				F7658C142691859C00B7BD5D /* AppDelegate.swift in Sources */,
 				F7658C162691859C00B7BD5D /* SceneDelegate.swift in Sources */,
+				F7658C4926918C0B00B7BD5D /* SixtApiClient.swift in Sources */,
+				F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */,
+				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
