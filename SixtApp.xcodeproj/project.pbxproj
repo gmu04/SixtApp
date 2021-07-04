@@ -19,6 +19,10 @@
 		F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4A26918D2F00B7BD5D /* ApiFactory.swift */; };
 		F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4C2691AD7B00B7BD5D /* ApiError.swift */; };
 		F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C4E2691B13500B7BD5D /* ApiClient.swift */; };
+		F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C502691D9FA00B7BD5D /* Auto.swift */; };
+		F7658C532691DA2E00B7BD5D /* Transmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C522691DA2E00B7BD5D /* Transmission.swift */; };
+		F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */; };
+		F7658C572691DC9100B7BD5D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C562691DC9100B7BD5D /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		F7658C4A26918D2F00B7BD5D /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
 		F7658C4C2691AD7B00B7BD5D /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F7658C4E2691B13500B7BD5D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		F7658C502691D9FA00B7BD5D /* Auto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto.swift; sourceTree = "<group>"; };
+		F7658C522691DA2E00B7BD5D /* Transmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmission.swift; sourceTree = "<group>"; };
+		F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCleanliness.swift; sourceTree = "<group>"; };
+		F7658C562691DC9100B7BD5D /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,10 @@
 		F7658C472691866700B7BD5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7658C502691D9FA00B7BD5D /* Auto.swift */,
+				F7658C562691DC9100B7BD5D /* Car.swift */,
+				F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */,
+				F7658C522691DA2E00B7BD5D /* Transmission.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,9 +325,13 @@
 				F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */,
 				F7658C182691859C00B7BD5D /* ViewController.swift in Sources */,
 				F7658C142691859C00B7BD5D /* AppDelegate.swift in Sources */,
+				F7658C532691DA2E00B7BD5D /* Transmission.swift in Sources */,
 				F7658C162691859C00B7BD5D /* SceneDelegate.swift in Sources */,
 				F7658C4926918C0B00B7BD5D /* SixtApiClient.swift in Sources */,
+				F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */,
+				F7658C572691DC9100B7BD5D /* Car.swift in Sources */,
 				F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */,
+				F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */,
 				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

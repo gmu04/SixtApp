@@ -19,7 +19,7 @@ final class ApiFactory{
         switch service {
         case .sixt:
             //TODO:get it from plist
-            let baseUrl = "https://cdn.sixt.io/codingtask"   // /cars"
+            let baseUrl = "https://cdn.sixt.io/"   // /codingtask/cars"
             apiClient = SixtApiClient(baseUrl: baseUrl)
         default:
             apiClient = nil
