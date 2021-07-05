@@ -21,12 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //TEST
+        //TESTING
         //CacheManager.carImages.removeAllObjects()
         
         
         //Fetching data takes a while when "Very bad network condition" level of "Network Link Conditioner",
-        //so, I try to get data when the controller is up, instead of calling it in viewDidLoad
+        //so, I try to get data when the controller is instantiated in SceneDelegate, instead of calling it in viewDidLoad
         /*getCars { cars in
             self.cars = cars
             self.tableview.reloadData()
