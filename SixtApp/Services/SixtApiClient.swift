@@ -72,7 +72,7 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
                 let cars = try JSONDecoder().decode([Car].self, from: validData)
                 //print(cars)
                 
-                //Put cars into cache
+                //Put cars into cache (- I will also need the same data in MapView)
                 let carCache = CarCache(cars)
                 CacheManager.cars.setObject(carCache, forKey: CacheManager.CacheKey.cars.rawValue)
                 

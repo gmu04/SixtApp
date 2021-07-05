@@ -18,6 +18,8 @@ THOUGHTS:
 
 *   I make CarDetailView SwiftUI view in order to demostrate how to use both frameworks for possible future scenarios.
 
+*   I check the app with different network conditions via "Network Link Conditioner"
+
 
 SceneDelegate.swift
      I inject service client instance in scene(_:,willConnectTo:,options:) method

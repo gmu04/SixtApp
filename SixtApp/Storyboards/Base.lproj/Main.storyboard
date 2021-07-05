@@ -28,7 +28,6 @@
         <!--Cars-->
         <scene sceneID="gQx-SQ-IXL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SN8-M0-kVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="7TD-L8-63d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cars" image="car.2.fill" catalog="system" id="Iqg-aw-Sxo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OmQ-9i-sqE">
@@ -39,6 +38,7 @@
                         <segue destination="atA-bT-XTO" kind="relationship" relationship="rootViewController" id="Mb9-nD-e2X"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SN8-M0-kVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1735" y="-167"/>
         </scene>
@@ -91,10 +91,16 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="G7q-eT-wQ8">
+                                                    <rect key="frame" x="41.5" y="22" width="37" height="37"/>
+                                                    <color key="color" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="G7q-eT-wQ8" firstAttribute="centerY" secondItem="Iam-au-D1k" secondAttribute="centerY" id="0FH-gt-LsY"/>
                                                 <constraint firstAttribute="bottom" secondItem="Iam-au-D1k" secondAttribute="bottom" id="F0l-q1-2Fx"/>
                                                 <constraint firstItem="Iam-au-D1k" firstAttribute="top" secondItem="6RZ-TB-tpC" secondAttribute="top" id="GY8-Eq-A06"/>
+                                                <constraint firstItem="G7q-eT-wQ8" firstAttribute="centerX" secondItem="Iam-au-D1k" secondAttribute="centerX" id="OQm-hc-Kqv"/>
                                                 <constraint firstAttribute="trailing" secondItem="IfN-MV-LjZ" secondAttribute="trailing" constant="8" id="Q2x-yg-gwk"/>
                                                 <constraint firstItem="IfN-MV-LjZ" firstAttribute="top" secondItem="6RZ-TB-tpC" secondAttribute="top" constant="8" id="U4c-20-WJO"/>
                                                 <constraint firstAttribute="bottom" secondItem="IfN-MV-LjZ" secondAttribute="bottom" constant="8" id="aHG-7L-KoB"/>
@@ -107,6 +113,7 @@
                                             <outlet property="fuelLevelLabel" destination="dsk-uD-qJc" id="A5j-fM-hST"/>
                                             <outlet property="licensePlateLabel" destination="i2l-UY-AMX" id="yqf-54-42t"/>
                                             <outlet property="makeLabel" destination="S7K-Re-Vuf" id="irb-9p-byF"/>
+                                            <outlet property="statusIndicator" destination="G7q-eT-wQ8" id="xPa-fQ-Nd7"/>
                                             <segue destination="3IE-PW-kHM" kind="show" identifier="carDetailViewSegueID" destinationCreationSelector="carDetailViewSegue:" id="4g0-Sl-WsF"/>
                                         </connections>
                                     </tableViewCell>
@@ -169,7 +176,7 @@
         <image name="defaultCar" width="840" height="458"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <namedColor name="Color">
-            <color red="1" green="0.37254901960784315" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.37299999594688416" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

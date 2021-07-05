@@ -12,6 +12,7 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var makeLabel: UILabel!
     @IBOutlet weak var licensePlateLabel: UILabel!
+    @IBOutlet weak var statusIndicator: UIActivityIndicatorView!
     
     //For production fuelLevel should be dynamicly rendered image
     @IBOutlet weak var fuelLevelLabel: UILabel!
@@ -32,9 +33,13 @@ class CarTableViewCell: UITableViewCell {
         //get car image from cache
         if let img = CacheManager.carImages.object(forKey: car.id as NSString) as? UIImage {
             carImage.image = img
+            statusIndicator.stopAnimating()
         }else{
             //or, download it
             downloadImage(car) { img in
+
+                self.statusIndicator.stopAnimating()
+                
                 guard img != nil else {
                     self.carImage.image = UIImage(named: "defaultCar")
                     return

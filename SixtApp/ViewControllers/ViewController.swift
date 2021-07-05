@@ -24,19 +24,23 @@ class ViewController: UIViewController {
         //TEST
         //CacheManager.carImages.removeAllObjects()
         
-        getCars(){
+        
+        //Fetching data takes a while when "Very bad network condition" level of "Network Link Conditioner",
+        //so, I try to get data when the controller is up, instead of calling it in viewDidLoad
+        /*getCars { cars in
+            self.cars = cars
             self.tableview.reloadData()
-        }
+        }*/
     }
     
     
     /// Fetch cars from API Service
-    private func getCars(completion:@escaping ()->Void){
+    internal func getCars(completion:@escaping ([Car])->Void){
         //TODO: Inject this code
         //let api = ApiFactory.service(.sixt)!
         
         //TODO: dont forget to run it in main queue
-        api.fetch(path: "/codingtask/cars", completion: { [self] result in
+        api.fetch(path: "/codingtask/cars", completion: { result in
             
             switch result {
             case .failure(let error):
@@ -63,10 +67,10 @@ class ViewController: UIViewController {
                 
             case .success(let data):
                 DispatchQueue.main.async {
-                    self.cars = data as? [Car]
+                    let cars = data as! [Car]
                     
                     //print(self.cars!)
-                    completion()
+                    completion(cars)
                     
                 }
             }
