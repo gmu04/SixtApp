@@ -16,10 +16,56 @@
                     <view key="view" contentMode="scaleToFill" id="sMk-hk-eZ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F68-Kb-3Kp">
+                                <rect key="frame" x="8" y="90" width="398" height="715"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OY1-ts-ym2">
+                                <rect key="frame" x="8" y="52" width="398" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xm-EP-x42">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="30"/>
+                                        <color key="backgroundColor" name="Color"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Type">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeMapType:" destination="IOG-Tw-Jw9" eventType="touchUpInside" id="Q7v-hz-5Y0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAr-d1-PYz">
+                                        <rect key="frame" x="207" y="0.0" width="191" height="30"/>
+                                        <color key="backgroundColor" name="Color"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="3D">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changePitch:" destination="IOG-Tw-Jw9" eventType="touchUpInside" id="N2b-4g-ovB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xDc-qu-p7e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xDc-qu-p7e" firstAttribute="trailing" secondItem="F68-Kb-3Kp" secondAttribute="trailing" constant="8" id="95x-PA-bD1"/>
+                            <constraint firstItem="F68-Kb-3Kp" firstAttribute="top" secondItem="OY1-ts-ym2" secondAttribute="bottom" constant="8" id="LDG-nP-26v"/>
+                            <constraint firstItem="xDc-qu-p7e" firstAttribute="trailing" secondItem="OY1-ts-ym2" secondAttribute="trailing" constant="8" id="Sp2-FG-SEo"/>
+                            <constraint firstItem="xDc-qu-p7e" firstAttribute="bottom" secondItem="F68-Kb-3Kp" secondAttribute="bottom" constant="8" id="YIR-DU-dqc"/>
+                            <constraint firstItem="F68-Kb-3Kp" firstAttribute="leading" secondItem="xDc-qu-p7e" secondAttribute="leading" constant="8" id="dC8-aG-frb"/>
+                            <constraint firstItem="OY1-ts-ym2" firstAttribute="top" secondItem="xDc-qu-p7e" secondAttribute="top" constant="8" id="hnj-dZ-GAc"/>
+                            <constraint firstItem="OY1-ts-ym2" firstAttribute="leading" secondItem="xDc-qu-p7e" secondAttribute="leading" constant="8" id="paN-Uh-44n"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="Map-7t-UPW"/>
+                    <connections>
+                        <outlet property="changeMapTypeButton" destination="8xm-EP-x42" id="Py7-V2-ZBd"/>
+                        <outlet property="changePitchButton" destination="VAr-d1-PYz" id="asM-WW-p46"/>
+                        <outlet property="mapView" destination="F68-Kb-3Kp" id="wqa-1p-hde"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWw-cj-FCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

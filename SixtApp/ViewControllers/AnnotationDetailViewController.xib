@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnotationDetailViewController" customModule="SixtApp" customModuleProvider="target">
+            <connections>
+                <outlet property="carImageView" destination="rlZ-pv-CV3" id="gpX-ou-xT6"/>
+                <outlet property="titleLabel" destination="yYz-V1-7K0" id="1z1-85-ksH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYz-V1-7K0" userLabel="title">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="KOp-Tm-kO4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <color key="textColor" name="Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultCar" translatesAutoresizingMaskIntoConstraints="NO" id="rlZ-pv-CV3" userLabel="car">
+                    <rect key="frame" x="8" y="112" width="398" height="269"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-zZ-z6V" userLabel="ok">
+                    <rect key="frame" x="8" y="814" width="398" height="40"/>
+                    <color key="backgroundColor" name="Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="R0J-Df-vSo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="done:" destination="-1" eventType="touchUpInside" id="RYs-3b-5ga"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITN-QB-0Ye">
+                    <rect key="frame" x="113.5" y="420" width="187" height="41"/>
+                    <string key="text">** NOTE
+Car attributes show here</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="lXN-BQ-QbP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lXN-BQ-QbP" firstAttribute="trailing" secondItem="rlZ-pv-CV3" secondAttribute="trailing" constant="8" id="7Mo-sf-8x8"/>
+                <constraint firstItem="BVb-zZ-z6V" firstAttribute="leading" secondItem="lXN-BQ-QbP" secondAttribute="leading" constant="8" id="7Ts-iI-fCb"/>
+                <constraint firstItem="lXN-BQ-QbP" firstAttribute="bottom" secondItem="BVb-zZ-z6V" secondAttribute="bottom" constant="8" id="FsR-Hp-hhQ"/>
+                <constraint firstItem="yYz-V1-7K0" firstAttribute="leading" secondItem="lXN-BQ-QbP" secondAttribute="leading" id="KZI-0t-sIz"/>
+                <constraint firstItem="lXN-BQ-QbP" firstAttribute="trailing" secondItem="BVb-zZ-z6V" secondAttribute="trailing" constant="8" id="KwU-4h-Tdj"/>
+                <constraint firstItem="rlZ-pv-CV3" firstAttribute="top" secondItem="yYz-V1-7K0" secondAttribute="bottom" constant="8" id="PnB-kH-eWw"/>
+                <constraint firstItem="ITN-QB-0Ye" firstAttribute="centerX" secondItem="lXN-BQ-QbP" secondAttribute="centerX" id="PyY-Ka-yD4"/>
+                <constraint firstItem="yYz-V1-7K0" firstAttribute="top" secondItem="lXN-BQ-QbP" secondAttribute="top" id="Vfs-3a-nI2"/>
+                <constraint firstItem="rlZ-pv-CV3" firstAttribute="leading" secondItem="lXN-BQ-QbP" secondAttribute="leading" constant="8" id="Zab-2a-WCL"/>
+                <constraint firstItem="lXN-BQ-QbP" firstAttribute="trailing" secondItem="yYz-V1-7K0" secondAttribute="trailing" id="ilA-Ba-neQ"/>
+                <constraint firstItem="rlZ-pv-CV3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="k40-mh-3ti"/>
+                <constraint firstItem="ITN-QB-0Ye" firstAttribute="top" secondItem="rlZ-pv-CV3" secondAttribute="bottom" constant="39" id="yEc-E7-g7q"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="defaultCar" width="840" height="458"/>
+        <namedColor name="Color">
+            <color red="1" green="0.37299999594688416" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

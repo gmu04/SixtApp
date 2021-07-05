@@ -30,6 +30,12 @@
 		F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */; };
 		F7658C662692DECD00B7BD5D /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C652692DECD00B7BD5D /* CarDetailView.swift */; };
 		F7986C5726931BEB0063C705 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7986C5626931BEB0063C705 /* MapKit.framework */; };
+		F7986C5B2693401E0063C705 /* SixtBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */; };
+		F7986C5D2693446D0063C705 /* MKMapType + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5C2693446D0063C705 /* MKMapType + ext.swift */; };
+		F7986C5F26934FC10063C705 /* MapViewController + Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5E26934FC10063C705 /* MapViewController + Annotations.swift */; };
+		F7986C61269351170063C705 /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C60269351170063C705 /* CarAnnotation.swift */; };
+		F7FED2112693604C00193B59 /* AnnotationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FED20F2693604C00193B59 /* AnnotationDetailViewController.swift */; };
+		F7FED2122693604C00193B59 /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FED2102693604C00193B59 /* AnnotationDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		F7658C652692DECD00B7BD5D /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 		F7986C5626931BEB0063C705 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtBaseViewController.swift; sourceTree = "<group>"; };
+		F7986C5C2693446D0063C705 /* MKMapType + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapType + ext.swift"; sourceTree = "<group>"; };
+		F7986C5E26934FC10063C705 /* MapViewController + Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController + Annotations.swift"; sourceTree = "<group>"; };
+		F7986C60269351170063C705 /* CarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
+		F7FED20F2693604C00193B59 /* AnnotationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailViewController.swift; sourceTree = "<group>"; };
+		F7FED2102693604C00193B59 /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +178,13 @@
 		F7658C43269185D100B7BD5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */,
 				F7658C172691859C00B7BD5D /* ViewController.swift */,
 				F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */,
 				F7658C5A2692229500B7BD5D /* MapViewController.swift */,
+				F7986C5E26934FC10063C705 /* MapViewController + Annotations.swift */,
+				F7FED20F2693604C00193B59 /* AnnotationDetailViewController.swift */,
+				F7FED2102693604C00193B59 /* AnnotationDetailViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				F7658C1C2691859E00B7BD5D /* Assets.xcassets */,
-				F7658C1E2691859E00B7BD5D /* LaunchScreen.storyboard */,
 				F7658C212691859E00B7BD5D /* Info.plist */,
 			);
 			name = Artifacts;
@@ -187,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F7658C192691859C00B7BD5D /* Main.storyboard */,
+				F7658C1E2691859E00B7BD5D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -209,6 +225,8 @@
 				F7658C562691DC9100B7BD5D /* Car.swift */,
 				F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */,
 				F7658C522691DA2E00B7BD5D /* Transmission.swift */,
+				F7986C5C2693446D0063C705 /* MKMapType + ext.swift */,
+				F7986C60269351170063C705 /* CarAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +362,7 @@
 				F7658C202691859E00B7BD5D /* LaunchScreen.storyboard in Resources */,
 				F7658C1D2691859E00B7BD5D /* Assets.xcassets in Resources */,
 				F7658C5D2692A93500B7BD5D /* README.txt in Resources */,
+				F7FED2122693604C00193B59 /* AnnotationDetailViewController.xib in Resources */,
 				F7658C1B2691859C00B7BD5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,13 +396,18 @@
 				F7658C532691DA2E00B7BD5D /* Transmission.swift in Sources */,
 				F7658C162691859C00B7BD5D /* SceneDelegate.swift in Sources */,
 				F7658C4926918C0B00B7BD5D /* SixtApiClient.swift in Sources */,
+				F7986C5D2693446D0063C705 /* MKMapType + ext.swift in Sources */,
 				F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */,
 				F7658C5B2692229500B7BD5D /* MapViewController.swift in Sources */,
 				F7658C572691DC9100B7BD5D /* Car.swift in Sources */,
 				F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */,
 				F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */,
+				F7986C5F26934FC10063C705 /* MapViewController + Annotations.swift in Sources */,
+				F7986C61269351170063C705 /* CarAnnotation.swift in Sources */,
 				F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */,
+				F7986C5B2693401E0063C705 /* SixtBaseViewController.swift in Sources */,
 				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
+				F7FED2112693604C00193B59 /* AnnotationDetailViewController.swift in Sources */,
 				F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

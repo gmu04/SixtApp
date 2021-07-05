@@ -41,11 +41,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 vc1.tableview.reloadData()
             }
         }
+        
         //inject api service to the second tab - map view screen
         if let mapvc = tabBarController.viewControllers?[1] as? MapViewController{
             mapvc.api = api
         }
-
             
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
