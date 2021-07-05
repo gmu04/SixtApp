@@ -20,16 +20,29 @@ class CarTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
     func setValues(car:Car){
-
-        carImage.image = getImage(car)
+        
+        //get car image from cache
+        if let img = CacheManager.carImages.object(forKey: car.id as NSString) as? UIImage {
+            carImage.image = img
+        }else{
+            //or, download it
+            downloadImage(car) { img in
+                guard img != nil else {
+                    self.carImage.image = UIImage(named: "defaultCar")
+                    return
+                }
+                self.carImage.image = img
+            }
+        }
+        
         makeLabel.text = "\(car.make), \(car.modelName)"
         licensePlateLabel.text = car.licensePlate
         
@@ -37,29 +50,29 @@ class CarTableViewCell: UITableViewCell {
         fuelLevelLabel.text = "Fuel level: \(fuelLevel)%"
     }
     
-    private func getImage(_ car:Car) -> UIImage{
-        var carImage = UIImage(named: "defaultCar")!
-        
-        //get car image from cache
-        if let img = CacheManager.carImages.object(forKey: car.id as NSString) as? UIImage {
-            carImage = img
-        }else{
-            //download image
-            do {
-                if let url = URL(string: car.carImageUrl!){
-                    let data = try Data(contentsOf: url)
-                    if let img = UIImage(data: data){
-                        carImage = img
-                        
-                        //cache image
-                        CacheManager.carImages.setObject(carImage as AnyObject, forKey: car.id as NSString)
-                    }
+    private func downloadImage(_ car:Car, completion: @escaping (UIImage?)->Void){
+        if let url = URL(string: car.carImageUrl!){
+            //It is synch -> forget it
+            //let data = try Data(contentsOf: url)
+            
+            URLSession.shared.dataTask(with: url) { data, _, error in
+                guard let validatedData = data, error == nil else{
+                    DispatchQueue.main.async { completion(nil) }
+                    return
                 }
-            } catch {
-                print(error.localizedDescription, error)
-                
-            }
+                if let img = UIImage(data: validatedData){
+                    //cache image
+                    CacheManager.carImages.setObject(img as AnyObject, forKey: car.id as NSString)
+                    
+                    DispatchQueue.main.async {
+                        completion(img)
+                    }
+                }else{
+                    DispatchQueue.main.async { completion(nil) }
+                }
+            }.resume()
+            
         }
-        return carImage
     }
+    
 }

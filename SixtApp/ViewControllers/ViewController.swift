@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //TEST
+        //CacheManager.carImages.removeAllObjects()
+        
         getCars(){
             self.tableview.reloadData()
         }
