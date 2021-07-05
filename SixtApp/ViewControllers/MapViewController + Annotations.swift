@@ -23,16 +23,11 @@ extension MapViewController: MKMapViewDelegate{
         //show image (instead of pin)
         annotationView.image = UIImage(named: "defaultCarPin")
         
-        //if annotation.carPhoto == nil {
-        //    annotation.carPhoto = annotationView.image
-        //}
-        
         let paragraph = UILabel()
         paragraph.numberOfLines = 1//0
         paragraph.adjustsFontSizeToFitWidth = true
         paragraph.font = UIFont.preferredFont(forTextStyle: .caption1)
-        paragraph.text = annotation.subtitle    //annotation.historyText
-        //annotationView.detailCalloutAccessoryView = paragraph
+        paragraph.text = annotation.subtitle
         annotationView.leftCalloutAccessoryView = UIImageView(image: annotationView.image)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
         
