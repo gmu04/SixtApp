@@ -14,9 +14,10 @@ struct CacheManager{
     //caching car images
     static var carImages = NSCache<NSString, AnyObject>()
     
+    
     //Keys
     enum CacheKey:NSString{
-        case cars, carImages
+        case cars
     }
 }
 

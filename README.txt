@@ -16,6 +16,9 @@ THOUGHTS:
 
 *   I'd like to use storyboard because it seems easier to implement for this demo. I can also able to create all UI by code.
 
+*   I make CarDetailView SwiftUI view in order to demostrate how to use both frameworks for possible future scenarios.
+
+
 SceneDelegate.swift
      I inject service client instance in scene(_:,willConnectTo:,options:) method
      

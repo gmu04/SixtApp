@@ -27,6 +27,8 @@
 		F7658C5D2692A93500B7BD5D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F7658C5C2692A93500B7BD5D /* README.txt */; };
 		F7658C602692B01500B7BD5D /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C5F2692B01500B7BD5D /* CacheManager.swift */; };
 		F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */; };
+		F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */; };
+		F7658C662692DECD00B7BD5D /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C652692DECD00B7BD5D /* CarDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F7658C5C2692A93500B7BD5D /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F7658C5F2692B01500B7BD5D /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ext + tableview.swift"; sourceTree = "<group>"; };
+		F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		F7658C652692DECD00B7BD5D /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				F7658C462691865200B7BD5D /* Services */,
 				F7658C472691866700B7BD5D /* Models */,
 				F7658C43269185D100B7BD5D /* ViewControllers */,
+				F7658C672692E79300B7BD5D /* Views */,
 				F7658C45269185FF00B7BD5D /* Storyboards */,
 				F7658C44269185E600B7BD5D /* Artifacts */,
 			);
@@ -210,6 +215,15 @@
 				F7658C5F2692B01500B7BD5D /* CacheManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F7658C672692E79300B7BD5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */,
+				F7658C652692DECD00B7BD5D /* CarDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +359,7 @@
 			files = (
 				F7658C602692B01500B7BD5D /* CacheManager.swift in Sources */,
 				F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */,
+				F7658C662692DECD00B7BD5D /* CarDetailView.swift in Sources */,
 				F7658C182691859C00B7BD5D /* ViewController.swift in Sources */,
 				F7658C142691859C00B7BD5D /* AppDelegate.swift in Sources */,
 				F7658C532691DA2E00B7BD5D /* Transmission.swift in Sources */,
@@ -357,6 +372,7 @@
 				F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */,
 				F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */,
 				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
+				F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

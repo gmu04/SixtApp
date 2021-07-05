@@ -48,5 +48,39 @@ class Car:Auto{
     private enum CarCodingKey:String, CodingKey{
         case licensePlate, fuelLevel, latitude, longitude, innerCleanliness, carImageUrl
     }
+    
+    
+    
+    /// Designated initializer for creating sample car instance
+    override init() {
+        self.licensePlate = ""
+        self.fuelLevel = 0.0
+        self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        super.init()
+    }
 }
 
+
+extension Car{
+    
+    /// Sample car instance for SwiftUI previews
+    static var sampleCar:Car{
+        let car = Car()
+        car.id = "WMWSW31030T222518"
+        car.modelIdentifier =  "mini"
+        car.modelName =  "MINI"
+        car.name =  "Vanessa"
+        car.make =  "BMW"
+        car.group =  "MINI"
+        car.color =  "midnight_black"
+        car.series =  "MINI"
+        car.fuelType = "D"
+        car.fuelLevel =  0.7
+        car.transmission = .manuel
+        car.licensePlate =  "M-VO0259"
+        car.coordinate = CLLocationCoordinate2D(latitude: 48.134557, longitude: 11.576921)
+        car.innerCleanliness =  .regular
+        car.carImageUrl =  "https://cdn.sixt.io/codingtask/images/mini.png"
+        return car
+    }
+}

@@ -7,21 +7,28 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     var api:ApiClient!
     var cars:[Car]! = nil
+    
+    @IBOutlet weak var tableview: UITableView!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getCars()
+        getCars(){
+            self.tableview.reloadData()
+        }
     }
     
     
-    private func getCars(){
+    /// Fetch cars from API Service
+    private func getCars(completion:@escaping ()->Void){
         //TODO: Inject this code
         //let api = ApiFactory.service(.sixt)!
         
@@ -54,12 +61,14 @@ class ViewController: UIViewController {
             case .success(let data):
                 DispatchQueue.main.async {
                     self.cars = data as? [Car]
-                    print(self.cars!)
+                    
+                    //print(self.cars!)
+                    completion()
+                    
                 }
             }
         })
     }
-
 
 }
 
