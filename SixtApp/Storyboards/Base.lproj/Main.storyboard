@@ -48,8 +48,34 @@
                     <view key="view" contentMode="scaleToFill" id="Kug-Nn-OdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xyf-vq-giO">
+                                <rect key="frame" x="8" y="96" width="398" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="Ak6-TH-Ry7">
+                                        <rect key="frame" x="0.0" y="24.5" width="398" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ak6-TH-Ry7" id="6RZ-TB-tpC">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="atA-bT-XTO" id="3kC-6e-WVn"/>
+                                    <outlet property="delegate" destination="atA-bT-XTO" id="xpr-AD-qSe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lut-EZ-NkD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xyf-vq-giO" firstAttribute="top" secondItem="lut-EZ-NkD" secondAttribute="top" constant="8" id="NkA-2H-V4v"/>
+                            <constraint firstItem="lut-EZ-NkD" firstAttribute="trailing" secondItem="Xyf-vq-giO" secondAttribute="trailing" constant="8" id="WN6-UJ-o8v"/>
+                            <constraint firstItem="Xyf-vq-giO" firstAttribute="leading" secondItem="lut-EZ-NkD" secondAttribute="leading" constant="8" id="Y7Y-ee-ciZ"/>
+                            <constraint firstItem="lut-EZ-NkD" firstAttribute="bottom" secondItem="Xyf-vq-giO" secondAttribute="bottom" constant="8" id="cO8-iR-SjO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sixt Cars" id="a1Y-cj-vBP"/>
                 </viewController>

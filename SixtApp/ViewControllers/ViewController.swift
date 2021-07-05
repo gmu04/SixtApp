@@ -10,20 +10,23 @@ import UIKit
 class ViewController: UIViewController {
 
     var api:ApiClient!
+    var cars:[Car]! = nil
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-            
-            
+        getCars()
+    }
+    
+    
+    private func getCars(){
         //TODO: Inject this code
         //let api = ApiFactory.service(.sixt)!
-
+        
         //TODO: dont forget to run it in main queue
-        api.fetch(path: "/codingtask/cars", completion: { result in
+        api.fetch(path: "/codingtask/cars", completion: { [self] result in
             
             switch result {
             case .failure(let error):
@@ -42,19 +45,19 @@ class ViewController: UIViewController {
                 case .error(let e):
                     errorMessage = e.localizedDescription
                 }
+                
+                //TODO: If there is error, it should be written to repository such as Crashlytics
+                // This is not acceptable in release version
                 print(errorMessage)
                 
-            case .success(let data):
-                //print("\(jsonData)")
                 
-                //parse json here
-                let cars = data as! [Car]
-                print(cars)
-
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.cars = data as? [Car]
+                    print(self.cars!)
+                }
             }
         })
-      
-        
     }
 
 

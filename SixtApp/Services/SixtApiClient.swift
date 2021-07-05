@@ -33,6 +33,13 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
     
     
     func fetch(path:String, completion: @escaping (Result<Any, ApiError>)->Void){
+        
+        //get cars from cache - for this demo, caching cars might not be necessary
+        if let carCache = CacheManager.cars.object(forKey: CacheManager.CacheKey.cars.rawValue) as? CarCache {
+            completion(.success(carCache.cars))
+            return
+        }
+        
         guard let validURL = URL(string: path, relativeTo: self.baseURL) else {
             completion(.failure(ApiError.cannotInstantiateUrl("\(baseURL.absoluteString) + path: \(path)")))
             return
@@ -60,11 +67,15 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
             }
             
 
-            
             //parse json here
             do {
                 let cars = try JSONDecoder().decode([Car].self, from: validData)
                 //print(cars)
+                
+                //Put cars into cache
+                let carCache = CarCache(cars)
+                CacheManager.cars.setObject(carCache, forKey: CacheManager.CacheKey.cars.rawValue)
+                
                 completion(.success(cars))
             } catch {
                 print(error.localizedDescription, error)

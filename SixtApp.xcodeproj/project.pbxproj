@@ -24,6 +24,9 @@
 		F7658C552691DA5400B7BD5D /* InnerCleanliness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */; };
 		F7658C572691DC9100B7BD5D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C562691DC9100B7BD5D /* Car.swift */; };
 		F7658C5B2692229500B7BD5D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C5A2692229500B7BD5D /* MapViewController.swift */; };
+		F7658C5D2692A93500B7BD5D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F7658C5C2692A93500B7BD5D /* README.txt */; };
+		F7658C602692B01500B7BD5D /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C5F2692B01500B7BD5D /* CacheManager.swift */; };
+		F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		F7658C542691DA5400B7BD5D /* InnerCleanliness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCleanliness.swift; sourceTree = "<group>"; };
 		F7658C562691DC9100B7BD5D /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		F7658C5A2692229500B7BD5D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7658C5C2692A93500B7BD5D /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F7658C5F2692B01500B7BD5D /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ext + tableview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		F7658C072691859C00B7BD5D = {
 			isa = PBXGroup;
 			children = (
+				F7658C5C2692A93500B7BD5D /* README.txt */,
 				F7658C122691859C00B7BD5D /* SixtApp */,
 				F7658C292691859E00B7BD5D /* SixtAppTests */,
 				F7658C342691859E00B7BD5D /* SixtAppUITests */,
@@ -119,6 +126,7 @@
 			children = (
 				F7658C132691859C00B7BD5D /* AppDelegate.swift */,
 				F7658C152691859C00B7BD5D /* SceneDelegate.swift */,
+				F7658C5E2692AFFB00B7BD5D /* Managers */,
 				F7658C462691865200B7BD5D /* Services */,
 				F7658C472691866700B7BD5D /* Models */,
 				F7658C43269185D100B7BD5D /* ViewControllers */,
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F7658C172691859C00B7BD5D /* ViewController.swift */,
+				F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */,
 				F7658C5A2692229500B7BD5D /* MapViewController.swift */,
 			);
 			path = ViewControllers;
@@ -193,6 +202,14 @@
 				F7658C522691DA2E00B7BD5D /* Transmission.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F7658C5E2692AFFB00B7BD5D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F7658C5F2692B01500B7BD5D /* CacheManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +317,7 @@
 			files = (
 				F7658C202691859E00B7BD5D /* LaunchScreen.storyboard in Resources */,
 				F7658C1D2691859E00B7BD5D /* Assets.xcassets in Resources */,
+				F7658C5D2692A93500B7BD5D /* README.txt in Resources */,
 				F7658C1B2691859C00B7BD5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7658C602692B01500B7BD5D /* CacheManager.swift in Sources */,
 				F7658C4F2691B13500B7BD5D /* ApiClient.swift in Sources */,
 				F7658C182691859C00B7BD5D /* ViewController.swift in Sources */,
 				F7658C142691859C00B7BD5D /* AppDelegate.swift in Sources */,
@@ -336,6 +355,7 @@
 				F7658C572691DC9100B7BD5D /* Car.swift in Sources */,
 				F7658C4B26918D2F00B7BD5D /* ApiFactory.swift in Sources */,
 				F7658C512691D9FA00B7BD5D /* Auto.swift in Sources */,
+				F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */,
 				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

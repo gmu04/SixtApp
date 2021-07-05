@@ -21,12 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
  
         /*  Comment for reviewer:
-                I'd like to use storyboard because it seems easier to implement this demo.
-                However I am able to create all UI by code.
-                
+                I'd like to use storyboard because it seems easier to implement this demo. I can also able to create all UI by code.
                 I need to uncheck "Is Initial View Controller" checkbox to prevent it lauching by itself
          */
-        
 
         //instantiate api services here
         let api = ApiFactory.service(.sixt)!

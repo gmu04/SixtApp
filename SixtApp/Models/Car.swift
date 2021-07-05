@@ -20,11 +20,6 @@ import CoreLocation
 */
 
 
-/*  Comment for reviewer:
-
-*/
-
-
 class Car:Auto{
     var licensePlate:String
     var fuelLevel:Double
