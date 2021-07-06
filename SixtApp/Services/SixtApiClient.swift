@@ -14,7 +14,6 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
     
     //MARK: - Properties
     private(set) var baseURL: URL!
-
     
     
     /*  Comment for reviewer:
