@@ -65,24 +65,38 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
                 return
             }
             
-
-            //parse json here
-            do {
-                let cars = try JSONDecoder().decode([Car].self, from: validData)
-                //print(cars)
-                
+            //parse json here (sperate json parsing for unit tests)
+            let result = self.parseJson(data: validData)
+            switch result{
+            case .failure(let error):
+                completion(.failure(error))
+            
+            case .success(let carsAny):
                 //Put cars into cache (- I will also need the same data in MapView)
+                let cars = carsAny as! [Car]
                 let carCache = CarCache(cars)
                 CacheManager.cars.setObject(carCache, forKey: CacheManager.CacheKey.cars.rawValue)
-                
+
                 completion(.success(cars))
-            } catch {
-                print(error.localizedDescription, error)
-                completion(.failure(.serializationError(error)))
             }
             
             
         }.resume()
     }
-
+    
+    /**
+        Parses given data
+        - Parameter data: json data in UTF8 to be parsed
+        - Returns: Result enum retuns either [Car], or ApiError
+     */
+    func parseJson(data:Data) -> Result<Any, ApiError>{
+        do {
+            let cars = try JSONDecoder().decode([Car].self, from: data)
+            //print(cars)
+            return .success(cars)
+        } catch {
+            //print(error.localizedDescription, error)
+            return .failure(.serializationError(error))
+        }
+    }
 }
