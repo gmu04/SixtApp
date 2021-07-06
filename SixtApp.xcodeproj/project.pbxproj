@@ -36,6 +36,9 @@
 		F7986C61269351170063C705 /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C60269351170063C705 /* CarAnnotation.swift */; };
 		F7FED2112693604C00193B59 /* AnnotationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FED20F2693604C00193B59 /* AnnotationDetailViewController.swift */; };
 		F7FED2122693604C00193B59 /* AnnotationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FED2102693604C00193B59 /* AnnotationDetailViewController.xib */; };
+		F7FED21426941A3E00193B59 /* SixtServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FED21326941A3E00193B59 /* SixtServiceTests.swift */; };
+		F7FED21626943CD900193B59 /* CarsJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = F7FED21526943CD900193B59 /* CarsJson.txt */; };
+		F7FED218269445F700193B59 /* MockSixtApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FED217269445F700193B59 /* MockSixtApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		F7986C60269351170063C705 /* CarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
 		F7FED20F2693604C00193B59 /* AnnotationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailViewController.swift; sourceTree = "<group>"; };
 		F7FED2102693604C00193B59 /* AnnotationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailViewController.xib; sourceTree = "<group>"; };
+		F7FED21326941A3E00193B59 /* SixtServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtServiceTests.swift; sourceTree = "<group>"; };
+		F7FED21526943CD900193B59 /* CarsJson.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CarsJson.txt; sourceTree = "<group>"; };
+		F7FED217269445F700193B59 /* MockSixtApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSixtApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +166,11 @@
 		F7658C292691859E00B7BD5D /* SixtAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				F7FED21326941A3E00193B59 /* SixtServiceTests.swift */,
 				F7658C2A2691859E00B7BD5D /* SixtAppTests.swift */,
 				F7658C2C2691859E00B7BD5D /* Info.plist */,
+				F7FED21526943CD900193B59 /* CarsJson.txt */,
+				F7FED217269445F700193B59 /* MockSixtApiClient.swift */,
 			);
 			path = SixtAppTests;
 			sourceTree = "<group>";
@@ -371,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FED21626943CD900193B59 /* CarsJson.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +426,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FED218269445F700193B59 /* MockSixtApiClient.swift in Sources */,
+				F7FED21426941A3E00193B59 /* SixtServiceTests.swift in Sources */,
 				F7658C2B2691859E00B7BD5D /* SixtAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
