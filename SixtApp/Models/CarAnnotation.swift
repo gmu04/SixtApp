@@ -34,7 +34,7 @@ class CarAnnotation: NSObject, MKAnnotation {
         else{
             
             
-            #warning("I think cache is not sufficient. Check instruments &| find a better solution.")
+            //TODO: I think using cache is not sufficient. Check instruments &| find a better solution.
             //TODO: Due to time constraint of the project, I will be downloading some of the images synchronously.
             if let url = URL(string: car.carImageUrl ?? ""),
                let validData = try? Data(contentsOf: url){
