@@ -20,6 +20,9 @@ THOUGHTS:
 
 *   I check the app with different network conditions via "Network Link Conditioner"
 
+*   To overcome possible performance problems, I think paging will be necessary, however I am not going to implement it in this demo project.
+
+
 
 SceneDelegate.swift
      I inject service client instance in scene(_:,willConnectTo:,options:) method
