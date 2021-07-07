@@ -35,6 +35,8 @@ class CarTableViewCell: UITableViewCell {
             carImage.image = img
             statusIndicator.stopAnimating()
         }else{
+            let currentGeneration = self.generation
+            
             //or, download it
             downloadImage(car) { img in
 
@@ -44,6 +46,7 @@ class CarTableViewCell: UITableViewCell {
                     self.carImage.image = UIImage(named: "defaultCar")
                     return
                 }
+                guard currentGeneration == self.generation else { return }
                 self.carImage.image = img
             }
         }
@@ -79,5 +82,12 @@ class CarTableViewCell: UITableViewCell {
             
         }
     }
+ 
     
+    private var generation = 0
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        generation += 1
+        print(generation)
+    }
 }
