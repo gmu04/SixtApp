@@ -30,7 +30,14 @@ class ViewController: SixtBaseViewController {
         }*/
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //deselect row when coming back from detail view
+        //  actually in real word user likes to see which cell they tapped... So, making the selecting color might be a better choice. - ask business staff
+        guard let selectedIndexPath = tableview.indexPathForSelectedRow else { return }
+        tableview.deselectRow(at: selectedIndexPath, animated: animated)
+    }
     
 
 }
