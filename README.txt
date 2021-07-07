@@ -20,7 +20,7 @@ THOUGHTS:
 
 *   I check the app with different network conditions via "Network Link Conditioner"
 
-*   To overcome possible performance problems, I think paging will be necessary, however I am not going to implement it in this demo project.
+*   To overcome possible performance problems, I think paging will be necessary. But API service is not supporting it. (If it does support, I prefer to implement it).
 
 
 
