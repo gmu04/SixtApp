@@ -45,7 +45,15 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
         }
         //print("\n GET: \(validURL.absoluteString)\n")
         
-        let urlSession = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: .main)
+        
+        
+        //Due to following link, I prefer ephemeral instead of default mode
+        //https://developer.apple.com/documentation/watchkit/keeping_your_watchos_content_up_to_date/making_default_and_ephemeral_requests
+        
+        //session configuration let us set more networking details, timeout etc. which is not necessary at this poing
+        let sessionConfiguration = URLSessionConfiguration.ephemeral
+        let urlSession = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: .main)
+        
         urlSession.dataTask(with: validURL) { (data, response, error) in
             
             //check data & error
