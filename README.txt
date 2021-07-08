@@ -22,6 +22,7 @@ THOUGHTS:
 
 *   To overcome possible performance problems, I think paging will be necessary. But API service is not supporting it. (If it does support, I prefer to implement it).
 
+*   I think the app would be more testable to use some CarsDataSource manager class intead of implementing UITableViewDataSource, UITableViewDelegate in the extension.
 
 
 SceneDelegate.swift

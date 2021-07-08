@@ -91,7 +91,7 @@
         <!--Sixt Cars-->
         <scene sceneID="cSt-Mt-WBR">
             <objects>
-                <viewController id="atA-bT-XTO" customClass="ViewController" customModule="SixtApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerID" id="atA-bT-XTO" customClass="ViewController" customModule="SixtApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kug-Nn-OdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
