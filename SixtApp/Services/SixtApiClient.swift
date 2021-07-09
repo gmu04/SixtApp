@@ -59,7 +59,7 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
             //check data & error
             guard let validData = data, error == nil else {
                 //print("\n -> ERROR= \(error!.localizedDescription)\n")
-                completion(.failure(ApiError.error(error!)))
+                DispatchQueue.main.async { completion(.failure(ApiError.error(error!))) }
                 return
             }
             
@@ -69,7 +69,7 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
             //check if any http error
             if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode != 200 {
                 //print("API call status: http\(httpURLResponse.statusCode), \"\(httpURLResponse.description)\"")
-                completion(.failure(ApiError.httpError(httpURLResponse.statusCode, httpURLResponse.description)))
+                DispatchQueue.main.async { completion(.failure(ApiError.httpError(httpURLResponse.statusCode, httpURLResponse.description))) }
                 return
             }
             
@@ -77,15 +77,19 @@ final class SixtApiClient: NSObject, ApiClient, URLSessionDelegate{
             let result = self.parseJson(data: validData)
             switch result{
             case .failure(let error):
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             
             case .success(let carsAny):
                 //Put cars into cache (- I will also need the same data in MapView)
                 let cars = carsAny as! [Car]
                 let carCache = CarCache(cars)
                 CacheManager.cars.setObject(carCache, forKey: CacheManager.CacheKey.cars.rawValue)
-
-                completion(.success(cars))
+                
+                DispatchQueue.main.async {
+                    completion(.success(cars))
+                }
             }
             
             
