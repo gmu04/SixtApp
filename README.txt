@@ -6,7 +6,7 @@ It retrieves and displays cars both on a map and on a list.
 Gökhan Mutlu ------------------8<-----
 
 THOUGHTS:
-*   JSON data consists of static and instant values. Data is small, cars seem to stay where they are and for demo purpose it is acceptable.
+*   JSON data consists of static and instant values. Data is small, cars' position seem to be fixed.
     However in real word scenario cars might be moving, or might need to check locations repeatedly.
     In short, API servis might provide those data with two seperate calls. We will be able to have faster response, less processing, better caching.
 
