@@ -24,7 +24,12 @@ class CarTableViewCell: UITableViewCell {
    
     
     func setValues(car:Car){
-        //carImage.image = nil
+        makeLabel.text = "\(car.make), \(car.modelName)"
+        licensePlateLabel.text = car.licensePlate
+        
+        let fuelLevel = String.init(format: "%.0f", car.fuelLevel*100)
+        fuelLevelLabel.text = "Fuel level: \(fuelLevel)%"
+        
         
         //get car image from cache
         if let carImageName = car.carImageName,
@@ -32,7 +37,9 @@ class CarTableViewCell: UITableViewCell {
             carImage.image = img
             statusIndicator.stopAnimating()
         } else{
-            
+
+            carImage.image = nil
+
             //or, download it
             downloadImage(car) { img in
 
@@ -42,13 +49,6 @@ class CarTableViewCell: UITableViewCell {
                 }
             }
         }
-        
-        makeLabel.text = "\(car.make), \(car.modelName)"
-        licensePlateLabel.text = car.licensePlate
-        
-        let fuelLevel = String.init(format: "%.0f", car.fuelLevel*100)
-        fuelLevelLabel.text = "Fuel level: \(fuelLevel)%"
-        
     }
     
     private func downloadImage(_ car:Car, completion: @escaping (UIImage?)->Void){

@@ -16,6 +16,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! CarTableViewCell
         
+        cell.statusIndicator.startAnimating()
+        
         let car = self.cars[indexPath.row]
         cell.setValues(car: car)
         
