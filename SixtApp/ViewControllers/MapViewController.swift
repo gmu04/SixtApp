@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: SixtBaseViewController {
+class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var changeMapTypeButton: UIButton!

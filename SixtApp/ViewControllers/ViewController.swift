@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: SixtBaseViewController {
+class ViewController: BaseViewController {
 
     @IBOutlet weak var tableview: UITableView!
     

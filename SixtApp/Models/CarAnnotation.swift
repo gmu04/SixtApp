@@ -28,7 +28,7 @@ class CarAnnotation: NSObject, MKAnnotation {
                   title: "\(car.make), \(car.modelName)",
                   subtitle: "transmission: \(car.transmission), fuel level:\(String(format: "%0.0f", car.fuelLevel*100))")
         
-        if let img = CacheManager.carImages.object(forKey: car.id as NSString) as? UIImage {
+        if let img = CacheManager.carImages.object(forKey: car.carImageName! as NSString) as? UIImage {
             self.carPhoto = img
         }
         else{

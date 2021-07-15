@@ -107,7 +107,7 @@ struct CarDetailView: View {
     
     private func getImage() -> UIImage{
         let image:UIImage
-        if let img = CacheManager.carImages.object(forKey: self.car.id as NSString) as? UIImage {
+        if let img = CacheManager.carImages.object(forKey: self.car.carImageName! as NSString) as? UIImage {
             image = img
         }else{
             image = UIImage(named: "defaultCar")!

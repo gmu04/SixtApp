@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SixtBaseViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     var api:ApiClient!
     var cars:[Car]! = nil

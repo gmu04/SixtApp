@@ -30,7 +30,7 @@
 		F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */; };
 		F7658C662692DECD00B7BD5D /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7658C652692DECD00B7BD5D /* CarDetailView.swift */; };
 		F7986C5726931BEB0063C705 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7986C5626931BEB0063C705 /* MapKit.framework */; };
-		F7986C5B2693401E0063C705 /* SixtBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */; };
+		F7986C5B2693401E0063C705 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5A2693401E0063C705 /* BaseViewController.swift */; };
 		F7986C5D2693446D0063C705 /* MKMapType + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5C2693446D0063C705 /* MKMapType + ext.swift */; };
 		F7986C5F26934FC10063C705 /* MapViewController + Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C5E26934FC10063C705 /* MapViewController + Annotations.swift */; };
 		F7986C61269351170063C705 /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7986C60269351170063C705 /* CarAnnotation.swift */; };
@@ -88,7 +88,7 @@
 		F7658C632692CF0800B7BD5D /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		F7658C652692DECD00B7BD5D /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 		F7986C5626931BEB0063C705 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtBaseViewController.swift; sourceTree = "<group>"; };
+		F7986C5A2693401E0063C705 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F7986C5C2693446D0063C705 /* MKMapType + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapType + ext.swift"; sourceTree = "<group>"; };
 		F7986C5E26934FC10063C705 /* MapViewController + Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController + Annotations.swift"; sourceTree = "<group>"; };
 		F7986C60269351170063C705 /* CarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		F7658C43269185D100B7BD5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7986C5A2693401E0063C705 /* SixtBaseViewController.swift */,
+				F7986C5A2693401E0063C705 /* BaseViewController.swift */,
 				F7658C172691859C00B7BD5D /* ViewController.swift */,
 				F7658C612692BA7B00B7BD5D /* ViewController + ext + tableview.swift */,
 				F7658C5A2692229500B7BD5D /* MapViewController.swift */,
@@ -415,7 +415,7 @@
 				F7986C5F26934FC10063C705 /* MapViewController + Annotations.swift in Sources */,
 				F7986C61269351170063C705 /* CarAnnotation.swift in Sources */,
 				F7658C622692BA7B00B7BD5D /* ViewController + ext + tableview.swift in Sources */,
-				F7986C5B2693401E0063C705 /* SixtBaseViewController.swift in Sources */,
+				F7986C5B2693401E0063C705 /* BaseViewController.swift in Sources */,
 				F7658C4D2691AD7B00B7BD5D /* ApiError.swift in Sources */,
 				F7FED2112693604C00193B59 /* AnnotationDetailViewController.swift in Sources */,
 				F7658C642692CF0800B7BD5D /* CarTableViewCell.swift in Sources */,
@@ -606,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gokhanmutlu.example.SixtApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -625,7 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gokhanmutlu.example.SixtApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

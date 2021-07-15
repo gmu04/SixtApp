@@ -5,7 +5,7 @@
 //  Created by Gokhan Mutlu on 4.07.2021.
 //
 
-import Foundation
+import UIKit
 
 /// Sixt API client which manages all API calls
 ///
@@ -15,6 +15,7 @@ final class SixtApiClient: NSObject, ApiClient{
     //MARK: - Properties
     private(set) var baseURL: URL!
     
+    //serial queue - run async
     lazy private var urlSession =
         URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: .main)
 

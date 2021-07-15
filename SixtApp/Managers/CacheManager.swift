@@ -8,10 +8,11 @@
 import Foundation
 
 struct CacheManager{
-    //caching cars array after json parsing
+    
+    //cars array after json parsing
     static var cars = NSCache<NSString, AnyObject>()
     
-    //caching car images
+    //car images
     static var carImages = NSCache<NSString, AnyObject>()
     
     

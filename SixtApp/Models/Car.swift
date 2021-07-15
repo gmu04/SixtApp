@@ -49,7 +49,15 @@ class Car:Auto{
         case licensePlate, fuelLevel, latitude, longitude, innerCleanliness, carImageUrl
     }
     
-    
+    ///car image name is the key for cache
+    var carImageName:String?{
+        guard let imageUrlStr = carImageUrl, let idx = imageUrlStr.lastIndex(of: "/") else{
+            return nil
+        }
+                
+        let idx_:String.Index = imageUrlStr.index(idx, offsetBy: 1)
+        return String(imageUrlStr[(idx_)...])
+    }
     
     /// Designated initializer for creating sample car instance
     override init() {
