@@ -13,7 +13,6 @@ class ViewController: SixtBaseViewController {
     @IBOutlet weak var tableview: UITableView!
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,10 +23,10 @@ class ViewController: SixtBaseViewController {
         
         //Fetching data takes a while when "Very bad network condition" level of "Network Link Conditioner",
         //so, I try to get data when the controller is instantiated in SceneDelegate, instead of calling it in viewDidLoad
-        /*getCars { cars in
+        getCars { cars in
             self.cars = cars
             self.tableview.reloadData()
-        }*/
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,5 +39,10 @@ class ViewController: SixtBaseViewController {
     }
     
 
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print("\(#function) is called")
+    }
 }
 

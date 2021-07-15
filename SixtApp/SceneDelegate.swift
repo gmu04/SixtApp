@@ -36,10 +36,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let nvc = tabBarController.viewControllers?.first as? UINavigationController,
            let vc1 = nvc.viewControllers.first as? ViewController{
             vc1.api = api
-            vc1.getCars { cars in
-                vc1.cars = cars
-                vc1.tableview.reloadData()
-            }
         }
         
         //inject api service to the second tab - map view screen
