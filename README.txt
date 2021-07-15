@@ -32,4 +32,4 @@ SixtApiClient.swift
     *   I did not prefer to use singleton pattern, which is very common, because I am injecting api client when the app starts,
         and wont be necessary to create it later. Besides SixtApi is just used to fetch data. Any threading issues expected for current scenario(s)
 
-s
+
