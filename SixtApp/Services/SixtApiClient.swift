@@ -59,6 +59,14 @@ final class SixtApiClient: NSObject, ApiClient{
                 DispatchQueue.main.async { completion(.failure(ApiError.error(error!))) }
                 return
             }
+            guard response != nil,
+                  let mime = response?.mimeType,
+                  mime == "application/json" else {
+                print("Wrong MIME type!")
+                DispatchQueue.main.async { completion(.failure(ApiError.jsonDataExpected))
+                }
+                return
+            }
             
             //check if any http error
             if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode != 200 {
@@ -66,6 +74,7 @@ final class SixtApiClient: NSObject, ApiClient{
                 DispatchQueue.main.async { completion(.failure(ApiError.httpError(httpURLResponse.statusCode, httpURLResponse.description))) }
                 return
             }
+            
             
             //parse json here (sperate json parsing for unit tests)
             let result = self.parseJson(data: validData)

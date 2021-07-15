@@ -28,27 +28,8 @@ class SixtBaseViewController: UIViewController {
             
             switch result {
             case .failure(let error):
-                //completion(.failure(error))
-                let errorMessage: String
-                switch error {
-                case .cannotInstantiateUrl(let message):
-                    errorMessage = message
-                    
-                case .httpError(let httpCode, let description):
-                    errorMessage = "HTTP Error: \(httpCode):\(description)"
-                    
-                case .serializationError(let e):
-                    errorMessage = e.localizedDescription
-                    
-                case .error(let e):
-                    errorMessage = e.localizedDescription
-                }
-                
-                //TODO: If there is error, it should be written to repository such as Crashlytics
-                // This is not acceptable in release version
-                print(errorMessage)
-                
-                
+                self.handleFailure(error)
+
             case .success(let data):
                 DispatchQueue.main.async {
                     let cars = data as! [Car]
@@ -59,5 +40,29 @@ class SixtBaseViewController: UIViewController {
                 }
             }
         })
+    }
+    
+    private func handleFailure(_ error:ApiError){
+        let errorMessage: String
+        switch error {
+        case .cannotInstantiateUrl(let message):
+            errorMessage = message
+            
+        case .httpError(let httpCode, let description):
+            errorMessage = "HTTP Error: \(httpCode):\(description)"
+            
+        case .serializationError(let e):
+            errorMessage = e.localizedDescription
+            
+        case .jsonDataExpected:
+            errorMessage = "JSON expected"
+            
+        case .error(let e):
+            errorMessage = e.localizedDescription
+        }
+        
+        //TODO: If there is error, it should be written to repository such as Crashlytics
+        // This is not acceptable in release version
+        print(errorMessage)
     }
 }

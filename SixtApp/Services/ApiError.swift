@@ -11,6 +11,7 @@ import Foundation
 enum ApiError: Error {
     case cannotInstantiateUrl(String)
     case httpError(Int, String)
+    case jsonDataExpected
     case serializationError(Error)
     case error(Error)
 }
