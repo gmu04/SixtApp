@@ -23,7 +23,6 @@ class BaseViewController: UIViewController {
         //TODO: Inject this code
         //let api = ApiFactory.service(.sixt)!
         
-        //TODO: dont forget to run it in main queue
         api.fetch(path: "/codingtask/cars", completion: { result in
             
             switch result {
@@ -62,7 +61,6 @@ class BaseViewController: UIViewController {
         }
         
         //TODO: If there is error, it should be written to repository such as Crashlytics
-        // This is not acceptable in release version
         print(errorMessage)
     }
 }
